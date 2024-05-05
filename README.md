@@ -1,3 +1,15 @@
+npm i uuid
+
+npm i --save @fortawesome/fontawesome-svg-core
+
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/free-brands-svg-icons
+и
+npm i --save @fortawesome/react-fontawesome@latest
+
+[со страницы](https://docs.fontawesome.com/web/use-with/react/) 
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
