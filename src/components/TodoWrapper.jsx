@@ -1,17 +1,15 @@
-import React, {useState} from 'react'
-import { TodoForm } from './TodoForm'
-import { faL } from '@fortawesome/free-solid-svg-icons'
-import { v4 as uuidv4 } from 'uuid'
-import { Todo } from './Todo'
-import { EditTodoForm } from './EditTodoForm'
-uuidv4()
+import {useState} from 'react';
+import { TodoForm } from './TodoForm';
+import { v4 as uuidv4 } from 'uuid';
+import { Todo } from './Todo';
+import { EditTodoForm } from './EditTodoForm';
+uuidv4();
 
 export const TodoWrapper = () => {
-    const [todos, setTodos] = useState([])
+    const [todos, setTodos] = useState([]);
 
     const addTodo = todo => {
-        setTodos([...todos, {id: uuidv4(), task: todo, completed: false, isEditing: false}])
-        console.log(todos)
+        setTodos([...todos, {id: uuidv4(), task: todo, completed: false, isEditing: false}]);
     }
 
     const toggleComplete = id =>{
