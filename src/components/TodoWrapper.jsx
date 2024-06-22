@@ -3,6 +3,7 @@ import { TodoForm } from './TodoForm'
 import { faL } from '@fortawesome/free-solid-svg-icons'
 import { v4 as uuidv4 } from 'uuid'
 import { Todo } from './Todo'
+import { EditTodoForm } from './EditTodoForm'
 uuidv4()
 
 export const TodoWrapper = () => {
@@ -30,7 +31,12 @@ export const TodoWrapper = () => {
       <h1>Get Things Done</h1>
       <TodoForm addTodo={addTodo} />
       {todos.map((todo, index) => (
-        <Todo task={todo} key={index} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo} />
+        todo.isEditing ? (
+          <EditTodoForm />
+        ) : (
+          <Todo task={todo} key={index} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo} />
+        )
+        
       ))}
     </div>
   )
